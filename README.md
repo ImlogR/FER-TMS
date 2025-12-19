@@ -40,15 +40,21 @@ The project consists of two major components:
 
 ## Setting up the environment:
 Ensure you have the following installed:
+
     Python version: 3.10
+
 Then create a virtual environment using venv:
+
     `python3 -m venv fer-tms`
+
 Activate the virtual environment:
+
     `source fer-tms/bin/activate` # for linux/mac
     `fer-tms\Scripts\activate` # for windows
 
 ## Installing Dependencies:
 Inside the activated virtual environment run:
+
     `pip install flask flask-socketio eventlet opencv-python numpy pillow tensorflow matplotlib scikit-learn ipykernel`
 
 ## Running the Real-Time Messaging Application:
@@ -60,6 +66,7 @@ Inside the activated virtual environment run:
     Running on http://0.0.0.0:5000/
 - Access the application in a browser:
     Open http://localhost:5000
+
 Note: Be sure to open localhost:5000 not the IP, the sokets wont work without DNS.
 
 How the app works:
@@ -75,11 +82,14 @@ How the app works:
 Debug Outputs(server-side):
 - full annotated frames with bounding boxes -> debug_faces/
 - Actual 48*48 model inputs -> grayscale/
+
 These folders are automatically populated as messagges are sent.
 
 ## Running Model Training and Evaluation:
 Navigate to:
+
     `cd model_development_code`
+    
 You will see the notebooks, open them in your text editor (vs-code) for ease.
 - Model building notebook:
     - model_build.ipynb:
