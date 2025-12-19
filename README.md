@@ -45,12 +45,12 @@ Ensure you have the following installed:
 
 Then create a virtual environment using venv:
 
-    `python3 -m venv fer-tms`
+    python3 -m venv fer-tms
 
 Activate the virtual environment:
 
-    `source fer-tms/bin/activate` # for linux/mac
-    `fer-tms\Scripts\activate` # for windows
+    source fer-tms/bin/activate # for linux/mac
+    fer-tms\Scripts\activate # for windows
 
 ## Installing Dependencies:
 Inside the activated virtual environment run:
@@ -59,9 +59,9 @@ Inside the activated virtual environment run:
 
 ## Running the Real-Time Messaging Application:
 - Navigate to the application folder:
-    `cd application_code`
+    cd application_code
 - Run the Flask + Socker.IO server:
-    `python3 app.py`
+    python3 app.py
 - You should see:
     Running on http://0.0.0.0:5000/
 - Access the application in a browser:
@@ -89,7 +89,7 @@ These folders are automatically populated as messagges are sent.
 Navigate to:
 
     `cd model_development_code`
-    
+
 You will see the notebooks, open them in your text editor (vs-code) for ease.
 - Model building notebook:
     - model_build.ipynb:
