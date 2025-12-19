@@ -1,0 +1,84 @@
+<!-- templates/chat.html -->
+{% extends "base.html" %}
+
+{% block title %}FER-TMS Chat{% endblock %}
+{% block extra_head %}
+  <!-- Using a Socket.IO CDN for websocker connection -->
+<script src="https://cdn.socket.io/4.8.1/socket.io.min.js" 
+        integrity="sha384-mkQ3/7FUtcGyoppY6bz/PORYoGqOl7/aSUMn2ymDOJcapfS6PHqxhRTMh1RR0Q6+"
+        crossorigin="anonymous"></script>
+
+  <!-- attaching chat.js -->
+  <script src="{{ url_for('static', filename='chat.js') }}"></script>
+
+<style>
+  #chat-log {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    height: 300px;
+    overflow-y: auto;
+    margin-bottom: 15px;
+    background: #fafafa;
+  }
+  .chat-message {
+    margin-bottom: 8px;
+    padding: 6px 8px;
+    border-radius: 6px;
+  }
+  .chat-message.me {
+    background: #e6f7ff;
+    text-align: right;
+  }
+  .chat-message.other {
+    background: #fff1f0;
+    text-align: left;
+  }
+  .chat-message .meta {
+    font-size: 0.8em;
+    color: #777;
+  }
+  #video {
+    border-radius: 6px;
+    background: #000;
+  }
+</style>
+{% endblock %}
+
+{% block content %}
+<h1>FER-TMS Chat</h1>
+<p>
+  Logged in as <strong>{{ username }}</strong> in channel
+  <strong>{{ room }}</strong>.
+</p>
+
+<div style="display: flex; gap: 20px;">
+  <div style="flex: 2;">
+    <div id="chat-log"></div>
+
+    <div>
+      <input type="text" id="messageInput" placeholder="Type your message..." style="width: 70%;">
+      <button id="sendBtn">Send</button>
+    </div>
+  </div>
+
+  <div style="flex: 1;">
+    <p><strong>Your camera:</strong></p>
+    <video id="video" width="240" height="180" autoplay playsinline></video>
+    <canvas id="captureCanvas" width="48" height="48" style="display:none;"></canvas>
+    <p style="font-size: 0.85em; color: #666;">
+      When you send a message, a frame is captured from your webcam
+      and sent to the server for FER. The server then broadcasts your message with
+      an emoji label to everyone in the same channel.
+    </p>
+  </div>
+</div>
+
+<!-- Passing username and room to JS -->
+<script>
+  window.FER_CHAT_CONFIG = {
+    username: "{{ username }}",
+    room: "{{ room }}"
+  };
+</script>
+{% endblock %}

@@ -1,0 +1,25 @@
+<!-- templates/login.html -->
+{% extends "base.html" %}
+
+{% block title %}Login - FER-TMS Chat{% endblock %}
+
+{% block content %}
+<h1>Login to FER-TMS Chat</h1>
+<p>Enter a username and channel name. Users with the same channel name are in the same group.</p>
+
+{% if error %}
+  <div class="error">{{ error }}</div>
+{% endif %}
+
+<form method="post" action="{{ url_for('login') }}">
+  <div style="margin-bottom: 10px;">
+    <label>Username:</label><br>
+    <input type="text" name="username" placeholder="e.g., John Doe" required>
+  </div>
+  <div style="margin-bottom: 10px;">
+    <label>Channel (room):</label><br>
+    <input type="text" name="room" placeholder="e.g., demo-room" required>
+  </div>
+  <button type="submit">Join Chat</button>
+</form>
+{% endblock %}
