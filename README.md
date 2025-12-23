@@ -60,11 +60,11 @@ Inside the activated virtual environment run:
 ## Running the Real-Time Messaging Application:
 - Navigate to the application folder:
 
-    cd application_code
+        cd application_code
 
 - Run the Flask + Socker.IO server:
 
-    python3 app.py
+        python3 app.py
 
 - You should see:
 
