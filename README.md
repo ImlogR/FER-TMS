@@ -59,12 +59,19 @@ Inside the activated virtual environment run:
 
 ## Running the Real-Time Messaging Application:
 - Navigate to the application folder:
+
     cd application_code
+
 - Run the Flask + Socker.IO server:
+
     python3 app.py
+
 - You should see:
+
     Running on http://0.0.0.0:5000/
+
 - Access the application in a browser:
+
     Open http://localhost:5000
 
 Note: Be sure to open localhost:5000 not the IP, the sokets wont work without DNS.
