@@ -50,6 +50,7 @@ Then create a virtual environment using venv:
 Activate the virtual environment:
 
     source fer-tms/bin/activate # for linux/mac
+    
     fer-tms\Scripts\activate # for windows
 
 ## Installing Dependencies:
