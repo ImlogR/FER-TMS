@@ -55,7 +55,7 @@ Activate the virtual environment:
 ## Installing Dependencies:
 Inside the activated virtual environment run:
 
-    `pip install flask flask-socketio eventlet opencv-python numpy pillow tensorflow matplotlib scikit-learn ipykernel`
+    pip install flask flask-socketio eventlet opencv-python numpy pillow tensorflow matplotlib scikit-learn ipykernel
 
 ## Running the Real-Time Messaging Application:
 - Navigate to the application folder:
@@ -88,7 +88,7 @@ These folders are automatically populated as messagges are sent.
 ## Running Model Training and Evaluation:
 Navigate to:
 
-    `cd model_development_code`
+    cd model_development_code
 
 You will see the notebooks, open them in your text editor (vs-code) for ease.
 - Model building notebook:
