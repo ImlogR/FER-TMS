@@ -134,3 +134,6 @@ After training, you must copy the final model files to the application folder i.
 
 ## Summary:
 This project integrates machine learning, real-time communication, and computer vision into a working emotion-aware chat system.
+
+## License
+This project is licensed under the MIT License.
